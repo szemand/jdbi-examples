@@ -42,9 +42,11 @@ public class Main {
 
             dao.findById(1).ifPresent(System.out::println);
 
-            //dao.delete(user1);
+            dao.findByUsername("pisti").ifPresent(System.out::println);
 
-            dao.list();
+            dao.delete(user1);
+
+            dao.list().stream().forEach(System.out::println);
         }
     }
 
